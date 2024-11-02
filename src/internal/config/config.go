@@ -7,6 +7,11 @@ import (
 )
 
 type Config struct {
+	HTTPSettings
+}
+
+type HTTPSettings struct {
+	Port string
 }
 
 // Initialises a default logger from env vars
@@ -31,6 +36,7 @@ func InitLogger() {
 
 func Load() (*Config, error) {
 	cfg := Config{}
+	cfg.HTTPSettings.Port = getEnvWithDefault("HTTP_PORT", "8080")
 
 	return &cfg, nil
 }

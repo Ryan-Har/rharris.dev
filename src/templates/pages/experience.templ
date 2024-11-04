@@ -1,0 +1,28 @@
+package pages
+
+import (
+"github.com/Ryan-Har/rharris.dev/src/templates/layouts"
+"github.com/Ryan-Har/rharris.dev/src/templates/partials"
+)
+
+templ Experience() {
+@layouts.Layout("Experience") {
+<div class="container px-6 py-3 mx-auto">
+    <div class="block">
+        @layouts.NavBar()
+    </div>
+    <div class="block">
+        @experienceTimeline()
+    </div>
+</div>
+}
+}
+
+templ experienceTimeline() {
+<div class="container">
+    <div class="timeline">
+        @partials.ExperienceTimelineCard(true)
+        @partials.ExperienceTimelineCard(false)
+    </div>
+</div>
+}

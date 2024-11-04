@@ -1,0 +1,59 @@
+package partials
+
+//TODO: make dynamic, adding project name, content and make tags dynamically coloured
+templ ProjectCard() {
+	<div class="card">
+		<header class="card-header">
+			<p class="card-header-title">Project Name</p>
+		</header>
+		<div class="card-content">
+			<div class="content">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
+				iaculis mauris.
+				<a href="#"></a>. <a href="#">#css</a> <a href="#">#responsive</a>
+			</div>
+			<span class="tag is-normal">go</span>
+			<span class="tag is-normal">Javascript</span>
+			<span class="tag is-normal">rabbitmq</span>
+			<span class="tag is-normal">HCL</span>
+		</div>
+	</div>
+}
+
+//creates timeline card, accepting a bool which, if true, creates a left side card
+templ ExperienceTimelineCard(isLeftSide bool) {
+	<div
+		if isLeftSide {
+			class="timeline-item is-left"
+		} else {
+			class="timeline-item is-right"
+		}
+	>
+		<div class="card">
+			<header class="card-header">
+				<p class="card-header-title is-flex is-justify-content-space-between is-align-items-center">
+					if isLeftSide {
+						<span>
+							Job Title
+							<span class="is-size-7 has-text-weight-light has-text-grey is-block">Company Name</span>
+						</span>
+						<span class="has-text-right">
+							Working date
+						</span>
+					} else {
+						<span>Working Date</span>
+						<span class="has-text-right">
+              Job Title
+							<span class="is-size-7 has-text-weight-light has-text-grey is-block">Company Name</span>
+						</span>
+					}
+				</p>
+			</header>
+			<div class="card-content">
+				<div class="content">
+					Description of project, tech stack, and more.
+				</div>
+			</div>
+		</div>
+	</div>
+}

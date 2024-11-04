@@ -1,9 +1,12 @@
 package handlers
 
 import (
+	"context"
 	"net/http"
+
+	"github.com/Ryan-Har/rharris.dev/src/templates/layouts"
 )
 
 func Home(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("home page"))
+	layouts.Home().Render(context.TODO(), w)
 }

@@ -15,6 +15,7 @@ templ headStandard(title string) {
 
 templ scriptsStandard() {
     <script src="https://unpkg.com/htmx.org@1.9.12"></script>
+    <script src="/static/js/theme.js"></script>
 }
 
 templ Layout(title string) {
@@ -29,7 +30,7 @@ templ Layout(title string) {
 }
 
 templ NavBar() {
-	<nav class="navbar" role="navigation" aria-label="main navigation">
+	<nav class="navbar has-background-inherit" role="navigation" aria-label="main navigation">
 		<div class="navbar-brand">
 			<a class="navbar-item" href="/">
 				Ryan Harris
@@ -49,7 +50,7 @@ templ NavBar() {
                 <a class="navbar-item" href="/experience">
                     Experience
                 </a>
-                <a class="navbar-item">
+                <a class="navbar-item" href="/tools">
                     Tools
                 </a>
 			</div>

@@ -37,7 +37,7 @@ templ ExperienceTimelineCard(isLeftSide bool, role models.ProfessionalRole) {
 					if isLeftSide {
 						<span>
 							{ role.Title }
-							<span class="is-size-7 has-text-weight-light has-text-grey is-block">{ role.Company }</span>
+							<span class="is-size-7 has-text-weight-light is-block">{ role.Company }</span>
 						</span>
 						<span class="has-text-right">
 							{ role.Dates }
@@ -46,7 +46,7 @@ templ ExperienceTimelineCard(isLeftSide bool, role models.ProfessionalRole) {
 						<span>{ role.Dates }</span>
 						<span class="has-text-right">
 							{ role.Title }
-							<span class="is-size-7 has-text-weight-light has-text-grey is-block">{ role.Company }</span>
+							<span class="is-size-7 has-text-weight-light is-block">{ role.Company }</span>
 						</span>
 					}
 				</p>

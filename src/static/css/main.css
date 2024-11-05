@@ -44,11 +44,7 @@
   padding-left: 2rem;
 }
 
-.timeline-item.is-left .card-content {
-  text-align: right;
-}
-
-.timeline-item.is-right .card-content {
+.timeline-item .card-content {
   text-align: left;
 }
 

@@ -1,5 +1,7 @@
 package partials
 
+import "github.com/Ryan-Har/rharris.dev/src/internal/models"
+
 //TODO: make dynamic, adding project name, content and make tags dynamically coloured
 templ ProjectCard() {
 	<div class="card">
@@ -21,7 +23,7 @@ templ ProjectCard() {
 }
 
 //creates timeline card, accepting a bool which, if true, creates a left side card
-templ ExperienceTimelineCard(isLeftSide bool) {
+templ ExperienceTimelineCard(isLeftSide bool, role models.ProfessionalRole) {
 	<div
 		if isLeftSide {
 			class="timeline-item is-left"
@@ -34,24 +36,28 @@ templ ExperienceTimelineCard(isLeftSide bool) {
 				<p class="card-header-title is-flex is-justify-content-space-between is-align-items-center">
 					if isLeftSide {
 						<span>
-							Job Title
-							<span class="is-size-7 has-text-weight-light has-text-grey is-block">Company Name</span>
+							{ role.Title }
+							<span class="is-size-7 has-text-weight-light has-text-grey is-block">{ role.Company }</span>
 						</span>
 						<span class="has-text-right">
-							Working date
+							{ role.Dates }
 						</span>
 					} else {
-						<span>Working Date</span>
+						<span>{ role.Dates }</span>
 						<span class="has-text-right">
-              Job Title
-							<span class="is-size-7 has-text-weight-light has-text-grey is-block">Company Name</span>
+							{ role.Title }
+							<span class="is-size-7 has-text-weight-light has-text-grey is-block">{ role.Company }</span>
 						</span>
 					}
 				</p>
 			</header>
 			<div class="card-content">
 				<div class="content">
-					Description of project, tech stack, and more.
+					<ul>
+					for _, point := range role.Content {
+						<li>{ point }</li>
+					}
+					</ul>
 				</div>
 			</div>
 		</div>

@@ -1,0 +1,68 @@
+[
+    {
+        "title": "SME Support Engineer",
+        "company": "Kerv",
+        "dates": "March 2023 – March 2024",
+        "content": [
+            "Worked as one of three engineers on a project for a large bank that involved migrating calls from various Nice NIM systems to Verint 15.2 WFO Voice recording systems.",
+            "Created multiple SQL scripts to ‘normalise’ the call data from the Nice databases into a format that the Verint import manager could understand. This involved gathering the data from various tables with various relationships and converting it into a single, large, table.",
+            "Created a PowerShell script to automate the retrieval of calls from EMC Centera, needed as part of the project due to a limitation of the import software. The script polled the database at a regular interval and pulled the call audio using an API in batches as needed."
+        ]
+    },
+    {
+        "title": "IT Engineer",
+        "company": "Redbox Recorders",
+        "dates": "October 2020 – March 2023",
+        "content": [
+            "Provided technical support and troubleshooting to customer IT teams and resellers of Redbox voice recording software.",
+            "Identified, replicated, and reported bugs to the development team.",
+            "Helped develop and manage the knowledge base as new issues became apparent and new features were released.",
+            "Deployed, integrated, and troubleshooted the new micro-services based Redbox platform on customer environments.",
+            "Created Kibana dashboards to report on key information that was required by customers.",
+            "Rolled out new containers within Kubernetes as patches became available.",
+            "Developed a Python script that replaced a comprehensive manual health check of the system that support engineers would do. This included checks within Linux, Kubernetes, Eventstore, and Nats, which then reported into a Slack channel via Webhooks. This saved around 20 hours of support time per week at the time of implementation."
+        ]
+    },
+    {
+        "title": "Systems Engineer",
+        "company": "Iomart Hosting",
+        "dates": "October 2019 – September 2020",
+        "content": [
+            "Provided technical support and advice for the data centre infrastructure of many clients.",
+            "Installed, supported, and troubleshooted the server hardware and VMware hypervisors for both Iomart and customers' private cloud.",
+            "Supported and troubleshooted customer environments, including Windows and Linux servers on both VMware and cloud infrastructure such as AWS and Azure, Cisco ASA and Firepower firewalls, VPNs, MSSQL and MySQL servers, Apache and Nginx web servers, Barracuda and HAProxy load balancers, Postfix mail servers, and VMware Horizon VDI servers."
+        ]
+    },
+    {
+        "title": "IT Analyst",
+        "company": "Buzz Bingo",
+        "dates": "February 2019 – September 2019",
+        "content": [
+            "Provided technical support and assistance to the head office of around 300 users and approximately 50 remote club locations.",
+            "Configured and inventoried laptops and phones for new starters and leavers.",
+            "Prepared technical tools for executive board meetings.",
+            "Led a project to roll out software updates to club servers using Symantec management software."
+        ]
+    },
+    {
+        "title": "Project Engineer",
+        "company": "Applied Tech Systems",
+        "dates": "January 2018 – October 2018",
+        "content": [
+            "Imaged and installed Windows PCs using SCCM to modernize the manufacturing floor at Rolls-Royce.",
+            "Installed proprietary software and integrated these PCs with existing manufacturing machines.",
+            "Worked with third parties to ensure network ports were installed and configured correctly.",
+            "Provided additional support to Rolls-Royce for a machine bay that was out of scope for the project. This effort helped bring the machine bay back into production, shielding the company from £1.4 million of potential lost revenue and strengthening the relationship between Applied Tech Systems and Rolls-Royce."
+        ]
+    },
+    {
+        "title": "IT Support Technician",
+        "company": "Better-IT",
+        "dates": "July 2013 – December 2017",
+        "content": [
+            "Provided IT support and advice to small and medium-sized businesses across the East Midlands.",
+            "Assisted with the move of IT equipment between offices.",
+            "Managed Office 365, WordPress websites, NAS devices, network equipment, and phone systems for over 50 companies."
+        ]
+    }
+]

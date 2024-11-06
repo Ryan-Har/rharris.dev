@@ -32,34 +32,62 @@ templ ExperienceTimelineCard(isLeftSide bool, role models.ProfessionalRole) {
 		}
 	>
 		<div class="card">
-			<header class="card-header">
-				<p class="card-header-title is-flex is-justify-content-space-between is-align-items-center">
-					if isLeftSide {
-						<span>
-							{ role.Title }
-							<span class="is-size-7 has-text-weight-light is-block">{ role.Company }</span>
-						</span>
-						<span class="has-text-right">
-							{ role.Dates }
-						</span>
-					} else {
-						<span>{ role.Dates }</span>
-						<span class="has-text-right">
-							{ role.Title }
-							<span class="is-size-7 has-text-weight-light is-block">{ role.Company }</span>
-						</span>
-					}
-				</p>
-			</header>
+			if isLeftSide {
+				@experienceCardHeaderLeft(role)
+			} else {
+				@experienceCardHeaderRight(role)
+			}
 			<div class="card-content">
 				<div class="content">
 					<ul>
-					for _, point := range role.Content {
-						<li>{ point }</li>
-					}
+						for _, point := range role.Content {
+							<li>{ point }</li>
+						}
 					</ul>
 				</div>
 			</div>
 		</div>
 	</div>
+}
+
+//like ExperienceTimelineCard, used for mobile devices or when you want the card only
+templ ExperienceCard(role models.ProfessionalRole) {
+	<div class="card">
+		@experienceCardHeaderLeft(role)
+		<div class="card-content">
+			<div class="content">
+				<ul>
+					for _, point := range role.Content {
+						<li>{ point }</li>
+					}
+				</ul>
+			</div>
+		</div>
+	</div>
+}
+
+templ experienceCardHeaderLeft(role models.ProfessionalRole) {
+	<header class="card-header">
+		<p class="card-header-title is-flex is-justify-content-space-between is-align-items-center">
+			<span>
+				{ role.Title }
+				<span class="is-size-7 has-text-weight-light is-block">{ role.Company }</span>
+			</span>
+			<span class="has-text-right">
+				{ role.Dates }
+			</span>
+		</p>
+	</header>
+}
+
+templ experienceCardHeaderRight(role models.ProfessionalRole) {
+	<header class="card-header">
+		<p class="card-header-title is-flex is-justify-content-space-between is-align-items-center">
+			<span>{ role.Dates }</span>
+			<span class="has-text-right">
+				{ role.Title }
+				<span class="is-size-7 has-text-weight-light is-block">{ role.Company }</span>
+			</span>
+		</p>
+	</header>
 }

@@ -1,100 +1,104 @@
 package pages
 
 import (
-"github.com/Ryan-Har/rharris.dev/src/templates/layouts"
-"github.com/Ryan-Har/rharris.dev/src/templates/partials"
+	"github.com/Ryan-Har/rharris.dev/src/templates/layouts"
+	"github.com/Ryan-Har/rharris.dev/src/templates/partials"
 )
 
 templ Home() {
-@layouts.Layout("Home") {
-<div class="container px-6 py-3 mx-auto">
-	<div class="block">
-		@layouts.NavBar()
-	</div>
-	<div class="block">
-		@homeAbout()
-	</div>
-	<div class="block">
-		@homeShowcase()
-	</div>
-	<div class="block pt-5">
-		@homeContact()
-	</div>
-</div>
+	@layouts.Layout("Home") {
+		<div class="container px-6 py-3 mx-auto">
+			<div class="block">
+				@layouts.NavBar()
+			</div>
+			<div class="block">
+				@homeAbout()
+			</div>
+			<div class="block">
+				@homeShowcase()
+			</div>
+			<div class="block pt-5 mb-5">
+				@homeContact()
+			</div>
+		</div>
+	}
 }
-}
-
 
 templ homeAbout() {
-<div class="columns">
-	<div class="column">
-		<h1 class="is-size-1 pb-2">Hi, <span class="dm-serif-text-regular-italic">I'm Ryan</span></h1>
-		<p class="is-size-5">
-			I’m a Support Engineer with a passion for tackling technical challenges, backed by a broad foundation in IT
-			support—from applications to infrastructure and servers.
-			Over the years, I’ve enjoyed working with both end-users and behind-the-scenes systems, gaining a deep
-			appreciation for what makes technology tick on both sides.
-		</p>
-		<br />
-		<p class="is-size-5">
-			Now, I’m excited to take the next step in my career toward DevOps or Site Reliability Engineering, where I
-			can dive deeper into automation, coding, and creating efficient, resilient systems.
-			I’m currently seeking remote opportunities where I can bring my hands-on experience and enthusiasm for
-			problem-solving to a team that values innovation and reliability."
-		</p>
-	</div>
-	<div class="column is-half pb-6 px-6 is-hidden-touch">
-		//TODO: Hide on mobile
-		<div class="image is-square">
-			<img class="is-rounded" src="/static/images/PXL_20241103_152401679.PORTRAIT.jpg"></img>
+	<div class="columns">
+		<div class="column">
+			<h1 class="is-size-1 pb-2">Hi, <span class="dm-serif-text-regular-italic">I'm Ryan</span></h1>
+			<p class="is-size-5">
+				I’m a Support Engineer with a passion for tackling technical challenges, backed by a broad foundation in IT
+				support—from applications to infrastructure and servers.
+				Over the years, I’ve enjoyed working with both end-users and behind-the-scenes systems, gaining a deep
+				appreciation for what makes technology tick on both sides.
+			</p>
+			<br/>
+			<p class="is-size-5">
+				Now, I’m excited to take the next step in my career toward DevOps or Site Reliability Engineering, where I
+				can dive deeper into automation, coding, and creating efficient, resilient systems.
+				I’m currently seeking remote opportunities where I can bring my hands-on experience and enthusiasm for
+				problem-solving to a team that values innovation and reliability."
+			</p>
+		</div>
+		<div class="column is-half pb-6 px-6 is-hidden-touch">
+			//TODO: Hide on mobile
+			<div class="image is-square">
+				<img class="is-rounded" src="/static/images/PXL_20241103_152401679.PORTRAIT.jpg"/>
+			</div>
 		</div>
 	</div>
-</div>
 }
 
 templ homeShowcase() {
-<h1 class="is-size-1">Featured Projects</h1>
-<div class="columns is-3-desktop is-6">
-	<div class="column is-one-third">
-		@partials.ProjectCard()
+	<h1 class="is-size-1">Featured Projects</h1>
+	<div class="columns is-3-desktop is-6">
+		<div class="column is-one-third">
+			@partials.ProjectCard()
+		</div>
+		<div class="column is-one-third">
+			@partials.ProjectCard()
+		</div>
+		<div class="column is-one-third">
+			@partials.ProjectCard()
+		</div>
 	</div>
-	<div class="column is-one-third">
-		@partials.ProjectCard()
-	</div>
-	<div class="column is-one-third">
-		@partials.ProjectCard()
-	</div>
-</div>
 }
 
 templ homeContact() {
-<h1 class="is-size-1">Get in touch</h1>
-<div class="content is-size-5">
-	<p>I am always available for exciting discussions and opportunities.</p>
-	<div class="is-flex is-flex-direction-column">
-		<span class="icon-text">
-			<span class="icon">
-				<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
-					fill="#e8eaed">
-					<path
-						d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm640-480L501-453q-5 3-10.5 4.5T480-447q-5 0-10.5-1.5T459-453L160-640v400h640v-400ZM480-520l320-200H160l320 200ZM160-640v10-59 1-32 32-.5 58.5-10 400-400Z" />
-				</svg>
+	<h1 class="is-size-1">Get in touch</h1>
+	<div class="content is-size-5">
+		<p>I am always available for exciting discussions and opportunities.</p>
+		<div class="is-flex is-flex-direction-column">
+			<span class="icon-text">
+				<span class="icon">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						height="24px"
+						viewBox="0 -960 960 960"
+						width="24px"
+						fill="#e8eaed"
+					>
+						<path
+							d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm640-480L501-453q-5 3-10.5 4.5T480-447q-5 0-10.5-1.5T459-453L160-640v400h640v-400ZM480-520l320-200H160l320 200ZM160-640v10-59 1-32 32-.5 58.5-10 400-400Z"
+						></path>
+					</svg>
+				</span>
+				<span><a href="mailto:ryan@harrisit.co.uk">Ryan@harrisit.co.uk</a></span>
 			</span>
-			<span><a href="mailto:ryan@harrisit.co.uk">Ryan@harrisit.co.uk</a></span>
-		</span>
-
-		<div class="social-icons mt-3 is-flex is-flex-direction-row">
-			<a href="https://www.linkedin.com/in/ryanharrisit/" class="svg-icon">
-			<span class="icon image is-48x48 mr-3">
-				<svg fill="none" viewBox="0 0 61 65" xmlns="http://www.w3.org/2000/svg" class="is-rounded"><path d="M60.258 23.833A17.781 17.781 0 0 0 56.3 12.715a17.932 17.932 0 0 0-.772-10.813 2.385 2.385 0 0 0-1.503-1.38c-.966-.33-4.621-.951-12.07 3.876a35.975 35.975 0 0 0-9.82-1.185c-3.317-.06-6.627.34-9.835 1.186C14.66-.54 10.686.26 9.886.495a2.414 2.414 0 0 0-1.504 1.407 17.93 17.93 0 0 0-.8 10.786 16.849 16.849 0 0 0-3.944 11.2c0 15.255 8.73 19.862 16.73 21.49a12.89 12.89 0 0 0-.84 3.13 1.336 1.336 0 0 0 0 .346v4.22c-7.283.607-8.841-3.655-8.993-4.138a3.208 3.208 0 0 0-.126-.331 12.207 12.207 0 0 0-6.896-6.138 2.414 2.414 0 1 0-1.53 4.58 7.295 7.295 0 0 1 3.917 3.35c.966 3.131 4.911 8.083 13.6 7.531v3.973a2.414 2.414 0 0 0 4.828 0V49.032a6.899 6.899 0 0 1 1.75-3.766A2.4 2.4 0 0 0 24.7 41.13c-8.414-.98-16.192-3.752-16.192-17.338h-.001a11.867 11.867 0 0 1 3.53-8.855 2.564 2.564 0 0 0 .553-2.565 11.955 11.955 0 0 1-.152-7.31 20.979 20.979 0 0 1 8.151 3.82 2.47 2.47 0 0 0 2.124.29 29.81 29.81 0 0 1 9.463-1.283c3.198-.084 6.388.35 9.448 1.283a2.457 2.457 0 0 0 2.124-.29 21.672 21.672 0 0 1 7.807-3.794 12.21 12.21 0 0 1-.18 7.38 2.388 2.388 0 0 0 .47 2.345 13.437 13.437 0 0 1 3.627 8.979c0 13.558-8.18 16.372-16.193 17.338a2.401 2.401 0 0 0-1.158 4.318c.855.648 1.848 2.468 1.848 5.516v10.924a2.413 2.413 0 1 0 4.827 0V50.964a14.707 14.707 0 0 0-1.034-5.614c6.482-1.378 16.496-5.64 16.496-21.517Z" fill="currentColor"></path></svg>
-			</span>
-			</a>
-			<a href="https://github.com/Ryan-Har" class="svg-icon">
-			<span class="icon image is-48x48">
-				<svg fill="none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="is-rounded" ><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/></svg>
-			</span>
-			</a>
+			<div class="social-icons mt-3 is-flex is-flex-direction-row">
+				<a href="https://www.linkedin.com/in/ryanharrisit/" class="svg-icon">
+					<span class="icon image is-48x48 mr-3">
+						<svg fill="none" viewBox="0 0 61 65" xmlns="http://www.w3.org/2000/svg" class="is-rounded"><path d="M60.258 23.833A17.781 17.781 0 0 0 56.3 12.715a17.932 17.932 0 0 0-.772-10.813 2.385 2.385 0 0 0-1.503-1.38c-.966-.33-4.621-.951-12.07 3.876a35.975 35.975 0 0 0-9.82-1.185c-3.317-.06-6.627.34-9.835 1.186C14.66-.54 10.686.26 9.886.495a2.414 2.414 0 0 0-1.504 1.407 17.93 17.93 0 0 0-.8 10.786 16.849 16.849 0 0 0-3.944 11.2c0 15.255 8.73 19.862 16.73 21.49a12.89 12.89 0 0 0-.84 3.13 1.336 1.336 0 0 0 0 .346v4.22c-7.283.607-8.841-3.655-8.993-4.138a3.208 3.208 0 0 0-.126-.331 12.207 12.207 0 0 0-6.896-6.138 2.414 2.414 0 1 0-1.53 4.58 7.295 7.295 0 0 1 3.917 3.35c.966 3.131 4.911 8.083 13.6 7.531v3.973a2.414 2.414 0 0 0 4.828 0V49.032a6.899 6.899 0 0 1 1.75-3.766A2.4 2.4 0 0 0 24.7 41.13c-8.414-.98-16.192-3.752-16.192-17.338h-.001a11.867 11.867 0 0 1 3.53-8.855 2.564 2.564 0 0 0 .553-2.565 11.955 11.955 0 0 1-.152-7.31 20.979 20.979 0 0 1 8.151 3.82 2.47 2.47 0 0 0 2.124.29 29.81 29.81 0 0 1 9.463-1.283c3.198-.084 6.388.35 9.448 1.283a2.457 2.457 0 0 0 2.124-.29 21.672 21.672 0 0 1 7.807-3.794 12.21 12.21 0 0 1-.18 7.38 2.388 2.388 0 0 0 .47 2.345 13.437 13.437 0 0 1 3.627 8.979c0 13.558-8.18 16.372-16.193 17.338a2.401 2.401 0 0 0-1.158 4.318c.855.648 1.848 2.468 1.848 5.516v10.924a2.413 2.413 0 1 0 4.827 0V50.964a14.707 14.707 0 0 0-1.034-5.614c6.482-1.378 16.496-5.64 16.496-21.517Z" fill="currentColor"></path></svg>
+					</span>
+				</a>
+				<a href="https://github.com/Ryan-Har" class="svg-icon">
+					<span class="icon image is-48x48">
+						<svg fill="none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="is-rounded"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"></path></svg>
+					</span>
+				</a>
+			</div>
 		</div>
 	</div>
-</div>
 }

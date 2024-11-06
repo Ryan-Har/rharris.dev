@@ -25,10 +25,15 @@ templ experienceTimeline() {
 		if len(roles) == 0 {
 			<p>Error: Unable to fetch work experience</p>
 		} else {
-			<div class="timeline">
-                for i, role := range roles {
-                    @partials.ExperienceTimelineCard(i % 2 == 0, role)
-                }
+			<div class="timeline is-hidden-mobile">
+				for i, role := range roles {
+					@partials.ExperienceTimelineCard(i%2 == 0, role)
+				}
+			</div>
+			<div class="is-hidden-tablet">
+				for _, role := range roles {
+					@partials.ExperienceCard(role)
+				}
 			</div>
 		}
 	</div>

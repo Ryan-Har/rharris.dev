@@ -24,8 +24,8 @@ type Asset struct {
 
 type Links struct {
 	GitHub        string `json:"github"`
-	Live          string `json:"live"`
-	Documentation string `json:"documentation"`
+	Live          string `json:"live,omitempty"`
+	Documentation string `json:"documentation,omitempty"`
 }
 
 //go:embed projects.json
@@ -37,8 +37,17 @@ func LoadProjectData() []Project {
 	var projects []Project
 	err := json.Unmarshal(projectData, &projects)
 	if err != nil {
-		slog.Error("error unmarshalling projects into JSON")
+		slog.Error("error unmarshalling projects into JSON", "error", err)
 		return nil
 	}
 	return projects
+}
+
+func (p *Project) IsFeatured() bool {
+	for _, tag := range p.Tags {
+		if tag == "featured" {
+			return true
+		}
+	}
+	return false
 }

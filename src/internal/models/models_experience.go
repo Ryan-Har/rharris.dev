@@ -22,7 +22,7 @@ func LoadExperienceData() []ProfessionalRole {
 	var roles []ProfessionalRole
 	err := json.Unmarshal(experienceData, &roles)
 	if err != nil {
-		slog.Error("error unmarshalling experience into JSON")
+		slog.Error("error unmarshalling experience into JSON", "error", err)
 		return nil
 	}
 	return roles

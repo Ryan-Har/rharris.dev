@@ -62,36 +62,34 @@
         ]
     },
     {
-        "name": "Site Monitor",
-        "description": "A web based site monitor for http, port and ping uptime checks",
+        "name": "Chat Application",
+        "description": "A chat application designed for team communication, particularly useful in support environments to manage client interactions and coordinate responses.",
         "content": [
-            "Site Monitor is designed simply to help users monitor the availability and performance of their websites. At its core, the application regularly checks if specified websites are online and operational, sending alerts if any site goes down. This can be particularly useful for small business owners, developers, or anyone managing personal or client websites who want peace of mind that their sites are consistently accessible."
+        "This chat application was built for team-based communication, particularly in a support context, similar to the environments used by companies like Just Eat or Amazon.",
+        "It enables real-time messaging and status updates, ideal for application support or customer service teams. The backend is structured as a set of microservices written in Go, deployed with Kubernetes and Helm charts. The frontend is built with vanilla JavaScript and styled using Bootstrap."
         ],
         "assets": [
             {
                 "type": "screenshot",
-                "url": "site-monitor-monitors.png",
-                "description": "Screenshot of the monitors page for the Site Monitor"
-            },
-            {
-                "type": "screenshot",
-                "url": "site-monitor-incidents.png",
-                "description": "Screenshot of the incidents page for the Site Monitor"
+                "url": "app-chats.png",
+                "description": "Screenshot of the main chat dashboard where users can view active conversations and team status."
             }
         ],
         "tags": [
             "featured",
             "go",
-            "templ"
+            "javaScript"
         ],
         "links": {
-            "github": "https://github.com/Ryan-Har/site-monitor",
-            "live": "https://site-monitor.rharris.dev/"
+            "github": "https://github.com/username/team-chat-application",
+            "live": "https://team-chat-application.com",
+            "documentation": "https://docs.team-chat-application.com"
         },
-        "features": [
-            "User Authentication: Firebase user authentication for secure accounts",
-            "Incident history: Incident history is preserved to help understand trends",
-            "Notifications: Webhook notifications to alert in real-time to a failure"
+        "highlight_features": [
+            "Real-time messaging with WebSockets",
+            "Live team and user status updates using Server-Sent Events",
+            "Microservices architecture deployed with Kubernetes and Helm charts",
+            "Simple and clean interface using vanilla JavaScript and Bootstrap"
         ]
     }
 ]

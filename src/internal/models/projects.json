@@ -1,0 +1,97 @@
+[
+    {
+        "name": "Adit",
+        "description": "Secure peer to peer file transfer using webrtc",
+        "content": [
+            "A command-line interface (CLI) tool built with Go that enables users to securely send files to one another over a WebRTC connection. This project is inspired by Magic Wormhole, a similar tool built in Python.",
+            "The file sender makes a websocket connection to a relay server, where the phrase is automatically generated and is the reference point for exchanging webRTC information. When the receiver connects using the phrase and information is exchanged, the file is transferred directly between the sender and receiver."
+            ],
+        "assets": [
+            {
+                "type": "gif",
+                "url": "adit-peek.gif",
+                "description": "Animated GIF showing how adit works"
+            }
+        ],
+        "tags": [
+            "featured",
+            "go",
+            "terraform"
+        ],
+        "links": {
+            "github": "https://github.com/Ryan-Har/adit"
+        },
+        "features": [
+            "End-to-End Encryption: Ensures files are securely transmitted between sender and receiver",
+            "Peer-to-Peer Transfer: Utilizes WebRTC to create a direct connection between devices",
+            "Cross-Platform Support: Works on Windows, macOS, and Linux systems",
+            "Automatic Deployment: Server deploys automatically to AWS using Github workflows and Terraform"
+        ]
+    },
+    {
+        "name": "Site Monitor",
+        "description": "A web based site monitor for http, port and ping uptime checks",
+        "content": [
+            "Site Monitor is designed simply to help users monitor the availability and performance of their websites. At its core, the application regularly checks if specified websites are online and operational, sending alerts if any site goes down. This can be particularly useful for small business owners, developers, or anyone managing personal or client websites who want peace of mind that their sites are consistently accessible."
+        ],
+        "assets": [
+            {
+                "type": "screenshot",
+                "url": "site-monitor-monitors.png",
+                "description": "Screenshot of the monitors page for the Site Monitor"
+            },
+            {
+                "type": "screenshot",
+                "url": "site-monitor-incidents.png",
+                "description": "Screenshot of the incidents page for the Site Monitor"
+            }
+        ],
+        "tags": [
+            "featured",
+            "go",
+            "templ"
+        ],
+        "links": {
+            "github": "https://github.com/Ryan-Har/site-monitor",
+            "live": "https://site-monitor.rharris.dev/"
+        },
+        "features": [
+            "User Authentication: Firebase user authentication for secure accounts",
+            "Incident history: Incident history is preserved to help understand trends",
+            "Notifications: Webhook notifications to alert in real-time to a failure"
+        ]
+    },
+    {
+        "name": "Site Monitor",
+        "description": "A web based site monitor for http, port and ping uptime checks",
+        "content": [
+            "Site Monitor is designed simply to help users monitor the availability and performance of their websites. At its core, the application regularly checks if specified websites are online and operational, sending alerts if any site goes down. This can be particularly useful for small business owners, developers, or anyone managing personal or client websites who want peace of mind that their sites are consistently accessible."
+        ],
+        "assets": [
+            {
+                "type": "screenshot",
+                "url": "site-monitor-monitors.png",
+                "description": "Screenshot of the monitors page for the Site Monitor"
+            },
+            {
+                "type": "screenshot",
+                "url": "site-monitor-incidents.png",
+                "description": "Screenshot of the incidents page for the Site Monitor"
+            }
+        ],
+        "tags": [
+            "featured",
+            "go",
+            "templ"
+        ],
+        "links": {
+            "github": "https://github.com/Ryan-Har/site-monitor",
+            "live": "https://site-monitor.rharris.dev/"
+        },
+        "features": [
+            "User Authentication: Firebase user authentication for secure accounts",
+            "Incident history: Incident history is preserved to help understand trends",
+            "Notifications: Webhook notifications to alert in real-time to a failure"
+        ]
+    }
+]

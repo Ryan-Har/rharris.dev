@@ -2,6 +2,8 @@ package pages
 
 import (
 	"github.com/Ryan-Har/rharris.dev/src/templates/layouts"
+	"github.com/Ryan-Har/rharris.dev/src/internal/models"
+	"github.com/Ryan-Har/rharris.dev/src/templates/partials"
 )
 
 templ Projects() {
@@ -10,7 +12,16 @@ templ Projects() {
 			<div class="block">
 				@layouts.NavBar()
 			</div>
-			<div class="block"></div>
+			<div class="block">
+				<div class="grid">
+					{{ projects := models.LoadProjectData() }}
+					for _, project := range projects {
+						<div class="cell">
+							@partials.ProjectCard(project)
+						</div>
+					}
+				</div>
+			</div>
 		</div>
 	}
 }

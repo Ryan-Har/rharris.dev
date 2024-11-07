@@ -1,3 +1,7 @@
+:root {
+  --bulma-shadow: none;
+}
+
 .light-theme {
   /* Light Mode */
   --background-color: #ada8a8;
@@ -40,8 +44,11 @@ a.svg-icon {
 
 .card {
   background-color: var(--background-color-alt);
-  box-shadow: 0px 4px 12px var(--shadow-color);
   transition: transform 0.3s ease;
+}
+
+.home-showcase .card {
+  box-shadow: 0px 4px 12px var(--shadow-color);
 }
 
 .card .card-header-title {
@@ -172,4 +179,174 @@ svg {
 
 .timeline-item.is-right .card {
   margin-right: auto;
+}
+
+.tag.featured {
+  color: #000000; /* Black text */
+  background-color: #e8b923; /* JavaScript yellow */
+}
+
+.tag.js {
+  color: #000000; /* Black text */
+  background-color: #f7df1e; /* JavaScript yellow */
+}
+
+.tag.go {
+  color: #ffffff; /* White text */
+  background-color: #00add8; /* Go blue */
+}
+
+.tag.terraform {
+  color: #ffffff; /* White text */
+  background-color: #5c4ee5; /* Terraform purple */
+}
+
+.tag.aws {
+  color: #232f3e; /* Dark text from AWS branding */
+  background-color: #ff9900; /* AWS orange */
+}
+
+.tag.templ {
+  color: #ffffff; /* White text */
+  background-color: #6e6e6e; /* Neutral gray for templating tools */
+}
+
+.tag.python {
+  color: #ffffff;
+  background-color: #3776ab; /* Python blue */
+}
+
+.tag.ruby {
+  color: #ffffff;
+  background-color: #cc342d; /* Ruby red */
+}
+
+.tag.html {
+  color: #ffffff;
+  background-color: #e34c26; /* HTML orange */
+}
+
+.tag.css {
+  color: #ffffff;
+  background-color: #2965f1; /* CSS blue */
+}
+
+.tag.ts {
+  color: #ffffff;
+  background-color: #3178c6; /* TypeScript blue */
+}
+
+.tag.java {
+  color: #ffffff;
+  background-color: #007396; /* Java blue */
+}
+
+.tag.cpp {
+  color: #ffffff;
+  background-color: #00599c; /* C++ blue */
+}
+
+.tag.csharp {
+  color: #ffffff;
+  background-color: #239120; /* C# green */
+}
+
+.tag.php {
+  color: #ffffff;
+  background-color: #777bb3; /* PHP purple */
+}
+
+.tag.shell {
+  color: #ffffff;
+  background-color: #4eaa25; /* Shell green */
+}
+
+.tag.docker {
+  color: #ffffff;
+  background-color: #2496ed; /* Docker blue */
+}
+
+.tag.k8s {
+  color: #ffffff;
+  background-color: #326ce5; /* Kubernetes blue */
+}
+
+.tag.git {
+  color: #ffffff;
+  background-color: #f05032; /* Git orange */
+}
+
+.tag.node {
+  color: #ffffff;
+  background-color: #43853d; /* Node.js green */
+}
+
+.tag.sql {
+  color: #ffffff;
+  background-color: #336791; /* General SQL blue */
+}
+
+.tag.helm {
+  color: #ffffff;
+  background-color: #0f1689; /* Helm dark blue */
+}
+
+.tag.ansible {
+  color: #ffffff;
+  background-color: #ee0000; /* Ansible red */
+}
+
+.tag.jenkins {
+  color: #ffffff;
+  background-color: #d24939; /* Jenkins red */
+}
+
+.tag.prometheus {
+  color: #ffffff;
+  background-color: #e6522c; /* Prometheus orange */
+}
+
+.tag.grafana {
+  color: #ffffff;
+  background-color: #f46800; /* Grafana orange */
+}
+
+.tag.azure {
+  color: #ffffff;
+  background-color: #0072c6; /* Azure blue */
+}
+
+.tag.gcp {
+  color: #ffffff;
+  background-color: #4285f4; /* Google Cloud blue */
+}
+
+.tag.circleci {
+  color: #ffffff;
+  background-color: #343434; /* CircleCI dark gray */
+}
+
+.tag.gitlab {
+  color: #ffffff;
+  background-color: #fc6d26; /* GitLab orange */
+}
+
+.tag.mongodb {
+  color: #ffffff;
+  background-color: #47a248; /* MongoDB green */
+}
+
+.tag.postgresql {
+  color: #ffffff;
+  background-color: #336791; /* PostgreSQL blue */
+}
+
+.tag.redis {
+  color: #ffffff;
+  background-color: #dc382d; /* Redis red */
+}
+
+.tag.mysql {
+  color: #ffffff;
+  background-color: #00758f; /* MySQL blue */
 }

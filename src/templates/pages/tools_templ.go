@@ -94,7 +94,7 @@ func darkToggle() templ.Component {
 			templ_7745c5c3_Var3 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<button id=\"theme-toggle\" class=\"button is-small is-light\">Toggle Theme</button>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<p>The only tool here is a toggle for dark mode. More tools will be added at a later date.</p><button id=\"theme-toggle\" class=\"button is-small \">Toggle Theme</button>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

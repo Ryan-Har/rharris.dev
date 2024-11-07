@@ -1,7 +1,7 @@
 [
     {
         "name": "Adit",
-        "description": "Secure peer to peer command line tool for transferring files using webrtc",
+        "description": "Secure peer to peer command line tool for transferring files using webrtc.",
         "content": [
             "Adit is a command-line interface (CLI) tool built with Go that enables users to securely send files to one another over a WebRTC connection. This project is inspired by Magic Wormhole, a similar tool built in Python.",
             "The file sender makes a websocket connection to a relay server, where the phrase is automatically generated and is the reference point for exchanging webRTC information. When the receiver connects using the phrase and information is exchanged, the file is transferred directly between the sender and receiver."
@@ -16,7 +16,9 @@
         "tags": [
             "featured",
             "go",
-            "terraform"
+            "terraform",
+            "aws",
+            "docker"
         ],
         "links": {
             "github": "https://github.com/Ryan-Har/adit"
@@ -30,7 +32,7 @@
     },
     {
         "name": "Site Monitor",
-        "description": "A web based site monitor for http, port and ping uptime checks",
+        "description": "A web based site monitor for http, port and ping uptime checks.",
         "content": [
             "Site Monitor is designed simply to help users monitor the availability and performance of their websites. At its core, the application regularly checks if specified websites are online and operational, sending alerts if any site goes down. This can be particularly useful for small business owners, developers, or anyone managing personal or client websites who want peace of mind that their sites are consistently accessible."
         ],
@@ -49,7 +51,9 @@
         "tags": [
             "featured",
             "go",
-            "templ"
+            "templ",
+            "docker",
+            "sql"
         ],
         "links": {
             "github": "https://github.com/Ryan-Har/site-monitor",
@@ -78,7 +82,10 @@
         "tags": [
             "featured",
             "go",
-            "javaScript"
+            "js",
+            "k8s",
+            "helm",
+            "postgresql"
         ],
         "links": {
             "github": "https://github.com/username/team-chat-application"

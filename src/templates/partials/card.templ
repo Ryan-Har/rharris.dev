@@ -1,26 +1,28 @@
 package partials
 
-import "github.com/Ryan-Har/rharris.dev/src/internal/models"
+import (
+	"fmt"
+	"github.com/Ryan-Har/rharris.dev/src/internal/models"
+)
 
-//TODO: make dynamic, adding project name, content and make tags dynamically coloured
 templ ProjectCard(p models.Project) {
 	<div x-data="{ open: false }" class="is-flex is-flex-direction-column is-full-height">
-	<div class="card is-flex is-flex-direction-column is-full-height" @click="open = true">
-		<header class="card-header">
-			<p class="card-header-title">{ p.Name }</p>
-		</header>
-		<div class="card-content is-flex is-flex-direction-column is-full-height">
-			<div class="content">
-				{ p.Description }
-			</div>
-			<div class="tags is-justify-content-flex-end is-justify-content-left mt-auto">
-			for _, tag := range p.Tags {
-				@cardTag(tag)
-			}
+		<div class="card is-flex is-flex-direction-column is-full-height" @click="open = true">
+			<header class="card-header">
+				<p class="card-header-title">{ p.Name }</p>
+			</header>
+			<div class="card-content is-flex is-flex-direction-column is-full-height">
+				<div class="content">
+					{ p.Description }
+				</div>
+				<div class="tags is-justify-content-flex-end is-justify-content-left mt-auto">
+					for _, tag := range p.Tags {
+						@cardTag(tag)
+					}
+				</div>
 			</div>
 		</div>
-	</div>
-	@projectCardModal(p)
+		@projectCardModal(p)
 	</div>
 }
 
@@ -95,5 +97,12 @@ templ experienceCardHeaderRight(role models.ProfessionalRole) {
 }
 
 templ cardTag(tag string) {
-	<span class="tag is-normal">{ tag }</span>
+	{{ classes := fmt.Sprintf("tag is-normal %s", tag) }}
+	switch tag {
+		case "featured":
+			{{ featuredTag := fmt.Sprintf("★ %s", tag) }}
+			<span class={ classes }>{ featuredTag }</span>
+		default:
+			<span class={ classes }>{ tag }</span>
+	}
 }

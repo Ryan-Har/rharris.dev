@@ -4,7 +4,8 @@ import "github.com/Ryan-Har/rharris.dev/src/internal/models"
 
 //TODO: make dynamic, adding project name, content and make tags dynamically coloured
 templ ProjectCard(p models.Project) {
-	<div class="card is-flex is-flex-direction-column is-full-height">
+	<div x-data="{ open: false }" class="is-flex is-flex-direction-column is-full-height">
+	<div class="card is-flex is-flex-direction-column is-full-height" @click="open = true">
 		<header class="card-header">
 			<p class="card-header-title">{ p.Name }</p>
 		</header>
@@ -18,6 +19,8 @@ templ ProjectCard(p models.Project) {
 			}
 			</div>
 		</div>
+	</div>
+	@projectCardModal(p)
 	</div>
 }
 

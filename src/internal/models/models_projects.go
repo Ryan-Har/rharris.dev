@@ -51,3 +51,7 @@ func (p *Project) IsFeatured() bool {
 	}
 	return false
 }
+
+func (a *Asset) URLWithBase() string {
+	return "/static/images/" + a.URL
+}

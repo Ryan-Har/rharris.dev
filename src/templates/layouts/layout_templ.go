@@ -71,7 +71,7 @@ func scriptsStandard() templ.Component {
 			templ_7745c5c3_Var3 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<script src=\"https://unpkg.com/htmx.org@1.9.12\"></script><script src=\"/static/js/theme.js\"></script>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<script src=\"/static/js/theme.js\"></script><script src=\"https://unpkg.com/htmx.org@1.9.12\"></script><script src=\"//unpkg.com/alpinejs\" defer></script>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

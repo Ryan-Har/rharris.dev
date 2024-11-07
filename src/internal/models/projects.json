@@ -1,9 +1,9 @@
 [
     {
         "name": "Adit",
-        "description": "Secure peer to peer file transfer using webrtc",
+        "description": "Secure peer to peer command line tool for transferring files using webrtc",
         "content": [
-            "A command-line interface (CLI) tool built with Go that enables users to securely send files to one another over a WebRTC connection. This project is inspired by Magic Wormhole, a similar tool built in Python.",
+            "Adit is a command-line interface (CLI) tool built with Go that enables users to securely send files to one another over a WebRTC connection. This project is inspired by Magic Wormhole, a similar tool built in Python.",
             "The file sender makes a websocket connection to a relay server, where the phrase is automatically generated and is the reference point for exchanging webRTC information. When the receiver connects using the phrase and information is exchanged, the file is transferred directly between the sender and receiver."
             ],
         "assets": [
@@ -71,7 +71,7 @@
         "assets": [
             {
                 "type": "screenshot",
-                "url": "app-chats.png",
+                "url": "all-chats.png",
                 "description": "Screenshot of the main chat dashboard where users can view active conversations and team status."
             }
         ],
@@ -81,11 +81,9 @@
             "javaScript"
         ],
         "links": {
-            "github": "https://github.com/username/team-chat-application",
-            "live": "https://team-chat-application.com",
-            "documentation": "https://docs.team-chat-application.com"
+            "github": "https://github.com/username/team-chat-application"
         },
-        "highlight_features": [
+        "features": [
             "Real-time messaging with WebSockets",
             "Live team and user status updates using Server-Sent Events",
             "Microservices architecture deployed with Kubernetes and Helm charts",

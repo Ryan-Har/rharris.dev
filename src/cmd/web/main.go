@@ -25,6 +25,7 @@ func main() {
 
 	//statics
 	mux.Handle("GET /static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
+	mux.HandleFunc("GET /home-profile-pic", handlers.HomeProfilePic)
 
 	loggingMux := middleware.Logging(mux)
 

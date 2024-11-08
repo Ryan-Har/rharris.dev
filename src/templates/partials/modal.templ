@@ -24,7 +24,7 @@ templ projectCardModal(p models.Project) {
 					}
 					if p.Assets != nil {
 						for _, asset := range p.Assets {
-							<img class="modal-media" src={ asset.URLWithBase() } alt={ asset.Description }/>
+							<img class="modal-media" src={ asset.URLWithBase() } alt={ asset.Description } loading="lazy"/>
 						}
 					}
 					<div class="external-links">

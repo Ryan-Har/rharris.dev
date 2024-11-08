@@ -1,8 +1,8 @@
 package pages
 
 import (
-	"github.com/Ryan-Har/rharris.dev/src/templates/layouts"
 	"github.com/Ryan-Har/rharris.dev/src/internal/models"
+	"github.com/Ryan-Har/rharris.dev/src/templates/layouts"
 	"github.com/Ryan-Har/rharris.dev/src/templates/partials"
 )
 
@@ -13,13 +13,15 @@ templ Projects() {
 				@layouts.NavBar()
 			</div>
 			<div class="block">
-				<div class="grid">
-					{{ projects := models.LoadProjectData() }}
-					for _, project := range projects {
-						<div class="cell">
-							@partials.ProjectCard(project)
-						</div>
-					}
+				<div class="fixed-grid has-1-cols-mobile has-2-cols-tablet has-3-cols-desktop">
+					<div class="grid">
+						{{ projects := models.LoadProjectData() }}
+						for _, project := range projects {
+							<div class="cell">
+								@partials.ProjectCard(project)
+							</div>
+						}
+					</div>
 				</div>
 			</div>
 		</div>

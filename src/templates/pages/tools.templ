@@ -1,0 +1,23 @@
+package pages
+
+import "github.com/Ryan-Har/rharris.dev/src/templates/layouts"
+
+templ Tools() {
+	@layouts.Layout("Tools") {
+		<div class="container px-6 py-3 mx-auto full-height">
+			<div class="block">
+				@layouts.NavBar()
+			</div>
+			<div class="block">
+				@darkToggle()
+			</div>
+		</div>
+	}
+}
+
+templ darkToggle() {
+	<p>
+	The only tool here is a toggle for dark mode. More tools will be added at a later date.
+	</p>
+    <button id="theme-toggle" class="button is-small ">Toggle Theme</button>
+}

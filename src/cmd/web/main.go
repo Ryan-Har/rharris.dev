@@ -19,6 +19,9 @@ func main() {
 
 	//pages
 	mux.HandleFunc("GET /", handlers.Home)
+	mux.HandleFunc("GET /projects", handlers.Projects)
+	mux.HandleFunc("GET /experience", handlers.Experience)
+	mux.HandleFunc("GET /tools", handlers.Tools)
 
 	//statics
 	mux.Handle("GET /static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))

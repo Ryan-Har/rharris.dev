@@ -1,0 +1,40 @@
+package pages
+
+import (
+	"github.com/Ryan-Har/rharris.dev/src/internal/models"
+	"github.com/Ryan-Har/rharris.dev/src/templates/layouts"
+	"github.com/Ryan-Har/rharris.dev/src/templates/partials"
+)
+
+templ Experience() {
+	@layouts.Layout("Experience") {
+		<div class="container px-6 py-3 mx-auto">
+			<div class="block">
+				@layouts.NavBar()
+			</div>
+			<div class="block">
+				@experienceTimeline()
+			</div>
+		</div>
+	}
+}
+
+templ experienceTimeline() {
+	<div class="container">
+		{{ roles := models.LoadExperienceData() }}
+		if len(roles) == 0 {
+			<p>Error: Unable to fetch work experience</p>
+		} else {
+			<div class="timeline is-hidden-mobile">
+				for i, role := range roles {
+					@partials.ExperienceTimelineCard(i%2 == 0, role)
+				}
+			</div>
+			<div class="is-hidden-tablet">
+				for _, role := range roles {
+					@partials.ExperienceCard(role)
+				}
+			</div>
+		}
+	</div>
+}

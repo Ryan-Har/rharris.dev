@@ -7,6 +7,6 @@ import (
 	"github.com/Ryan-Har/rharris.dev/src/templates/pages"
 )
 
-func Home(w http.ResponseWriter, r *http.Request) {
-	pages.Home().Render(context.TODO(), w)
+func Projects(w http.ResponseWriter, r *http.Request) {
+	pages.Projects().Render(context.TODO(), w)
 }

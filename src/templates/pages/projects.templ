@@ -1,0 +1,27 @@
+package pages
+
+import (
+	"github.com/Ryan-Har/rharris.dev/src/templates/layouts"
+	"github.com/Ryan-Har/rharris.dev/src/internal/models"
+	"github.com/Ryan-Har/rharris.dev/src/templates/partials"
+)
+
+templ Projects() {
+	@layouts.Layout("Projects") {
+		<div class="container px-6 py-3 mx-auto full-height">
+			<div class="block">
+				@layouts.NavBar()
+			</div>
+			<div class="block">
+				<div class="grid">
+					{{ projects := models.LoadProjectData() }}
+					for _, project := range projects {
+						<div class="cell">
+							@partials.ProjectCard(project)
+						</div>
+					}
+				</div>
+			</div>
+		</div>
+	}
+}

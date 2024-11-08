@@ -1,0 +1,99 @@
+package pages
+
+import (
+	"github.com/Ryan-Har/rharris.dev/src/internal/models"
+	"github.com/Ryan-Har/rharris.dev/src/templates/layouts"
+	"github.com/Ryan-Har/rharris.dev/src/templates/partials"
+)
+
+templ Home() {
+	@layouts.Layout("Home") {
+		<div class="container px-6 py-3 mx-auto">
+			<div class="block">
+				@layouts.NavBar()
+			</div>
+			<div class="block home-about">
+				@homeAbout()
+			</div>
+			<div class="block home-showcase">
+				@homeShowcase()
+			</div>
+			<div class="block home-contact pt-5 mb-5">
+				@homeContact()
+			</div>
+		</div>
+	}
+}
+
+templ homeAbout() {
+	<div class="columns">
+		<div class="column">
+			<h1 class="is-size-1 pb-2">Hi, <span class="dm-serif-text-regular-italic">I'm Ryan</span></h1>
+			<p class="is-size-5">
+				I’m a Support Engineer with a passion for tackling technical challenges, backed by a broad foundation in IT
+				support—from applications to infrastructure and servers.
+				Over the years, I’ve enjoyed working with both end-users and behind-the-scenes systems, gaining a deep
+				appreciation for what makes technology tick on both sides.
+			</p>
+			<br/>
+			<p class="is-size-5">
+				Now, I’m excited to take the next step in my career toward DevOps or Site Reliability Engineering, where I
+				can dive deeper into automation, coding, and creating efficient, resilient systems.
+				I’m currently seeking remote opportunities where I can bring my hands-on experience and enthusiasm for
+				problem-solving to a team that values innovation and reliability."
+			</p>
+		</div>
+		<div class="column is-half pb-6 px-6 is-hidden-touch">
+			//TODO: Hide on mobile
+			<div class="image is-square">
+				<img class="is-rounded" src="/static/images/PXL_20241103_152401679.PORTRAIT.jpg"/>
+			</div>
+		</div>
+	</div>
+}
+
+templ homeShowcase() {
+	<h1 class="is-size-1">Featured Projects</h1>
+	<div class="columns is-3-desktop is-6">
+		{{ projects := models.LoadProjectData() }}
+		{{ featuredCount := 0 }}
+		for _, project := range projects {
+			if project.IsFeatured() {
+				<div class="column is-one-third">
+				@partials.ProjectCard(project)
+				</div>
+				{{ featuredCount++ }}
+				if featuredCount == 3 {
+					{{ break }}
+				}
+			}
+		}
+	</div>
+}
+
+templ homeContact() {
+	<h1 class="is-size-1">Get in touch</h1>
+	<div class="content is-size-5">
+		<p>I am always available for exciting discussions and opportunities.</p>
+		<div class="is-flex is-flex-direction-column">
+			<span class="icon-text">
+				<span class="icon">
+					@partials.LetterSvg()
+				</span>
+				<span><a href="mailto:ryan@harrisit.co.uk">Ryan@harrisit.co.uk</a></span>
+			</span>
+			<div class="social-icons mt-3 is-flex is-flex-direction-row">
+				<a href="https://github.com/Ryan-Har" class="svg-icon">
+					<span class="icon image is-48x48 mr-3">
+						@partials.GithubSvg()
+					</span>
+				</a>
+				<a href="https://www.linkedin.com/in/ryanharrisit/" class="svg-icon">
+					<span class="icon image is-48x48">
+						@partials.LinkedInSvg()
+					</span>
+				</a>
+			</div>
+		</div>
+	</div>
+}

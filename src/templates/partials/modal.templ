@@ -1,0 +1,60 @@
+package partials
+
+import "github.com/Ryan-Har/rharris.dev/src/internal/models"
+
+templ projectCardModal(p models.Project) {
+	<div class="modal" :class="{ 'is-active': open }">
+		<div class="modal-background" @click="open = false"></div>
+		<div class="modal-card">
+			<header class="modal-card-head">
+				<p class="modal-card-title">{ p.Name }</p>
+			</header>
+			<section class="modal-card-body">
+				<div class="content">
+					for _, entry := range p.Content {
+						<p>{ entry } </p>
+					}
+					if p.Features != nil {
+						<h5>Features</h5>
+						<ul>
+							for _, feature := range p.Features {
+								<li>{ feature }</li>
+							}
+						</ul>
+					}
+					if p.Assets != nil {
+						for _, asset := range p.Assets {
+							<img class="modal-media" src={ asset.URLWithBase() } alt={ asset.Description }/>
+						}
+					}
+					<div class="external-links">
+						if p.Links.GitHub != "" {
+                            <div class="my-2 mx-2">
+                                <a href={ templ.URL(p.Links.GitHub) } class="is-flex">
+                                    <span class="icon image mr-3">
+                                        @GithubSvg()
+                                    </span>
+                                    <span>Check out the code on GitHub</span>
+                                </a>
+                            </div>
+						}
+                        if p.Links.Live != "" {
+                            <div class="my-2 mx-2">
+                                <a href={ templ.URL(p.Links.Live) } class="is-flex">
+                                    <span class="icon image mr-3">
+                                        @GlobeSvg()
+                                    </span>
+                                    <span>Check out the Live version</span>
+                                </a>
+                            </div>
+						}
+
+					</div>
+				</div>
+			</section>
+			<footer class="modal-card-foot is-flex is-flex-direction-row">
+				<button class="button ml-auto" @click="open = false">Close</button>
+			</footer>
+		</div>
+	</div>
+}

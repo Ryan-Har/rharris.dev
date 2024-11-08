@@ -1,0 +1,60 @@
+package layouts
+
+templ headStandard(title string) {
+    <head>
+        <meta charset="UTF-8"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+        <title>{ title }</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+        <link rel="stylesheet" href="/static/css/main.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+    </head>
+}
+
+templ scriptsStandard() {
+    <script src="/static/js/theme.js"></script>
+    <script src="https://unpkg.com/htmx.org@1.9.12"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+}
+
+templ Layout(title string) {
+    <!DOCTYPE html>
+    <html>
+        @headStandard(title)
+        <body class="dm-serif-text-regular">
+            { children... }
+            @scriptsStandard()
+        </body>
+    </html>
+}
+
+templ NavBar() {
+	<nav class="navbar has-background-inherit" role="navigation" aria-label="main navigation" x-data="{ isOpen: false }">
+		<div class="navbar-brand">
+			<a class="navbar-item" href="/">
+				Ryan Harris
+			</a>
+			<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar" @click="isOpen = !isOpen" :class="{ 'is-active': isOpen }">
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+			</a>
+		</div>
+		<div id="navbar" class="navbar-menu" :class="{ 'is-active': isOpen }">
+			<div class="navbar-end">
+                <a class="navbar-item" href="/projects">
+                    Projects
+                </a>
+                <a class="navbar-item" href="/experience">
+                    Experience
+                </a>
+                <a class="navbar-item" href="/tools">
+                    Tools
+                </a>
+			</div>
+		</div>
+	</nav>
+}

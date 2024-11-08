@@ -1,0 +1,352 @@
+:root {
+  --bulma-shadow: none;
+}
+
+.light-theme {
+  /* Light Mode */
+  --background-color: #ada8a8;
+  --background-color-alt: #999999fd;
+  --text-color: #141A1D;
+  --primary-color: #00d1b2;
+  --link-color: #0d54c7;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+.dark-theme {
+  /* Dark Mode */
+  --background-color: #141A1D;
+  --background-color-alt: #2c2c2cfd;
+  --text-color: #f5f5f5;
+  --primary-color: #ff3860;
+  --link-color: #fad74d;
+  --shadow-color: rgba(255, 255, 255, 0.2);
+}
+
+html {
+  height: 100%; /* Ensure body uses the full height */
+  margin: 0;    /* Remove default margin */
+}
+
+/* Apply these variables to Bulma components */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+a {
+  color: var(--link-color);
+}
+
+a.svg-icon {
+  color: var(--text-color);
+  background-color: inherit;
+}
+
+.card {
+  background-color: var(--background-color-alt);
+  transition: transform 0.3s ease;
+}
+
+.home-showcase .card {
+  box-shadow: 0px 4px 12px var(--shadow-color);
+}
+
+.card .card-header-title {
+  color: var(--text-color);
+}
+
+.card .card-content {
+  color: var(--text-color);
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.modal-card {
+  color: var(--text-color);
+}
+
+.modal-card-head {
+  background-color: var(--background-color-alt);
+}
+.modal-card-body {
+  background-color: var(--background-color-alt);
+}
+
+.modal-card-foot {
+  background-color: var(--background-color-alt);
+}
+
+@media screen and (min-width: 1024px) {
+  .modal-card {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .modal-card {
+    width: 50%;
+  }
+}
+
+.modal-media {
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+  object-fit: cover;
+}
+
+nav a.navbar-item{
+  color: var(--text-color);
+}
+
+nav a.navbar-item:hover {
+  background-color: var(--background-color-alt);
+}
+
+svg {
+  fill: var(--text-color)
+}
+
+/* fonts */
+.dm-serif-text-regular {
+    font-family: "DM Serif Text", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+.dm-serif-text-regular-italic {
+    font-family: "DM Serif Text", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+
+/* for layout containers which do not use the full screen */
+.full-height {
+  height: 100vh;
+}
+
+.is-full-height {
+  height: 100%;
+}
+
+/* Timeline styles */
+.timeline {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background-color: var(--text-color);
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+/* Timeline item styles */
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 1rem 0;
+}
+
+.timeline-item.is-left {
+  padding-right: 2rem;
+}
+
+.timeline-item.is-right {
+  margin-left: 50%;
+  padding-left: 2rem;
+}
+
+.timeline-item .card-content {
+  text-align: left;
+}
+
+.timeline-item .card {
+  z-index: 2;
+}
+
+.timeline-item.is-left .card {
+  margin-left: auto;
+}
+
+.timeline-item.is-right .card {
+  margin-right: auto;
+}
+
+.tag.featured {
+  color: #000000; /* Black text */
+  background-color: #e8b923; /* JavaScript yellow */
+}
+
+.tag.js {
+  color: #000000; /* Black text */
+  background-color: #f7df1e; /* JavaScript yellow */
+}
+
+.tag.go {
+  color: #ffffff; /* White text */
+  background-color: #00add8; /* Go blue */
+}
+
+.tag.terraform {
+  color: #ffffff; /* White text */
+  background-color: #5c4ee5; /* Terraform purple */
+}
+
+.tag.aws {
+  color: #232f3e; /* Dark text from AWS branding */
+  background-color: #ff9900; /* AWS orange */
+}
+
+.tag.templ {
+  color: #ffffff; /* White text */
+  background-color: #6e6e6e; /* Neutral gray for templating tools */
+}
+
+.tag.python {
+  color: #ffffff;
+  background-color: #3776ab; /* Python blue */
+}
+
+.tag.ruby {
+  color: #ffffff;
+  background-color: #cc342d; /* Ruby red */
+}
+
+.tag.html {
+  color: #ffffff;
+  background-color: #e34c26; /* HTML orange */
+}
+
+.tag.css {
+  color: #ffffff;
+  background-color: #2965f1; /* CSS blue */
+}
+
+.tag.ts {
+  color: #ffffff;
+  background-color: #3178c6; /* TypeScript blue */
+}
+
+.tag.java {
+  color: #ffffff;
+  background-color: #007396; /* Java blue */
+}
+
+.tag.cpp {
+  color: #ffffff;
+  background-color: #00599c; /* C++ blue */
+}
+
+.tag.csharp {
+  color: #ffffff;
+  background-color: #239120; /* C# green */
+}
+
+.tag.php {
+  color: #ffffff;
+  background-color: #777bb3; /* PHP purple */
+}
+
+.tag.shell {
+  color: #ffffff;
+  background-color: #4eaa25; /* Shell green */
+}
+
+.tag.docker {
+  color: #ffffff;
+  background-color: #2496ed; /* Docker blue */
+}
+
+.tag.k8s {
+  color: #ffffff;
+  background-color: #326ce5; /* Kubernetes blue */
+}
+
+.tag.git {
+  color: #ffffff;
+  background-color: #f05032; /* Git orange */
+}
+
+.tag.node {
+  color: #ffffff;
+  background-color: #43853d; /* Node.js green */
+}
+
+.tag.sql {
+  color: #ffffff;
+  background-color: #336791; /* General SQL blue */
+}
+
+.tag.helm {
+  color: #ffffff;
+  background-color: #0f1689; /* Helm dark blue */
+}
+
+.tag.ansible {
+  color: #ffffff;
+  background-color: #ee0000; /* Ansible red */
+}
+
+.tag.jenkins {
+  color: #ffffff;
+  background-color: #d24939; /* Jenkins red */
+}
+
+.tag.prometheus {
+  color: #ffffff;
+  background-color: #e6522c; /* Prometheus orange */
+}
+
+.tag.grafana {
+  color: #ffffff;
+  background-color: #f46800; /* Grafana orange */
+}
+
+.tag.azure {
+  color: #ffffff;
+  background-color: #0072c6; /* Azure blue */
+}
+
+.tag.gcp {
+  color: #ffffff;
+  background-color: #4285f4; /* Google Cloud blue */
+}
+
+.tag.circleci {
+  color: #ffffff;
+  background-color: #343434; /* CircleCI dark gray */
+}
+
+.tag.gitlab {
+  color: #ffffff;
+  background-color: #fc6d26; /* GitLab orange */
+}
+
+.tag.mongodb {
+  color: #ffffff;
+  background-color: #47a248; /* MongoDB green */
+}
+
+.tag.postgresql {
+  color: #ffffff;
+  background-color: #336791; /* PostgreSQL blue */
+}
+
+.tag.redis {
+  color: #ffffff;
+  background-color: #dc382d; /* Redis red */
+}
+
+.tag.mysql {
+  color: #ffffff;
+  background-color: #00758f; /* MySQL blue */
+}

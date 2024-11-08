@@ -88,13 +88,34 @@
             "postgresql"
         ],
         "links": {
-            "github": "https://github.com/username/team-chat-application"
+            "github": "https://github.com/Ryan-Har/chat-app"
         },
         "features": [
             "Real-time messaging with WebSockets",
             "Live team and user status updates using Server-Sent Events",
             "Microservices architecture deployed with Kubernetes and Helm charts",
             "Simple and clean interface using vanilla JavaScript and Bootstrap"
+        ]
+    },
+    {
+        "name": "rharris.dev personal site",
+        "description": "My personal portfolio website, created with the purpose of showcasing my experience and projects",
+        "content": [
+        "My personal portfolio website, a space dedicated to showcasing my professional journey, technical skills, and the projects I’ve worked on. This site serves as both a portfolio and a testament to my expertise.",
+        "Through this website, I aim to provide visitors with a clear understanding of my experience, highlighting key projects that demonstrate my ability to solve complex problems, collaborate with others, and deliver high-quality work. Whether it’s through interactive web applications, creative designs, or technical solutions, each project reflects my commitment to excellence and continuous learning."
+        ],
+        "tags": [
+            "go",
+            "templ"
+        ],
+        "links": {
+            "github": "https://github.com/Ryan-Har/rharris.dev",
+            "live": "https://rharris.dev"
+        },
+        "features": [
+            "Responsive Design",
+            "Interactive Project Gallery",
+            "Light and Dark mode toggle"
         ]
     }
 ]

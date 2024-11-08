@@ -44,9 +44,10 @@ templ homeAbout() {
 			</p>
 		</div>
 		<div class="column is-half pb-6 px-6 is-hidden-touch">
-			//TODO: Hide on mobile
-			<div class="image is-square">
-				<img class="is-rounded" src="/static/images/PXL_20241103_152401679.PORTRAIT.jpg"/>
+			<div class="image is-square" hx-get="/home-profile-pic" hx-trigger="load" hx-swap="innerHTML">
+				<div class="loader-wrapper">
+					<div class="loader"></div> <!-- loading animation -->
+				</div>
 			</div>
 		</div>
 	</div>
@@ -60,7 +61,7 @@ templ homeShowcase() {
 		for _, project := range projects {
 			if project.IsFeatured() {
 				<div class="column is-one-third">
-				@partials.ProjectCard(project)
+					@partials.ProjectCard(project)
 				</div>
 				{{ featuredCount++ }}
 				if featuredCount == 3 {

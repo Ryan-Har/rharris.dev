@@ -78,6 +78,11 @@ a.svg-icon {
   background-color: var(--background-color-alt);
 }
 
+.button {
+  color: var(--text-color);
+  background-color: var(--background-color-alt);
+}
+
 @media screen and (min-width: 1024px) {
   .modal-card {
     width: 80%;

@@ -21,6 +21,9 @@ templ Experience() {
 
 templ experienceTimeline() {
 	<div class="container">
+		<div class="section has-text-centered">
+			@partials.CVButton()
+		</div>
 		{{ roles := models.LoadExperienceData() }}
 		if len(roles) == 0 {
 			<p>Error: Unable to fetch work experience</p>

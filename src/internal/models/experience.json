@@ -4,8 +4,8 @@
         "company": "Resonate",
         "dates": "October 2024 - Present",
         "content": [
-            "Support and maintain our traffic management software solution, simulation and training systems.",
-            "Provide remote support to support commissioning activities or to facilitate incident resolution."
+            "Delivered consistent, high-quality client support with a focus on issue resolution, customer satisfaction, and continuous improvement of internal knowledge and support processes.",
+            "Acted as a key liaison between Customer Experience and Engineering teams, translating complex technical issues into actionable solutions and maintaining clear communication with clients."
         ]
     },
     {
@@ -14,7 +14,7 @@
         "dates": "March 2023 – March 2024",
         "content": [
             "Worked as one of three engineers on a project for a large bank that involved migrating calls from various Nice NIM systems to Verint 15.2 WFO Voice recording systems.",
-            "Created multiple SQL scripts to ‘normalise’ the call data from the Nice databases into a format that the Verint import manager could understand. This involved gathering the data from various tables with various relationships and converting it into a single, large, table.",
+            "Created multiple SQL scripts to ‘normalise’ the CDR data from the Nice databases into a format that the Verint import manager could understand. This involved gathering the data from various tables with various relationships and converting it into a single, large, table.",
             "Created a PowerShell script to automate the retrieval of calls from EMC Centera, needed as part of the project due to a limitation of the import software. The script polled the database at a regular interval and pulled the call audio using an API in batches as needed."
         ]
     },
@@ -23,13 +23,13 @@
         "company": "Redbox Recorders",
         "dates": "October 2020 – March 2023",
         "content": [
-            "Provided technical support and troubleshooting to customer IT teams and resellers of Redbox voice recording software.",
-            "Identified, replicated, and reported bugs to the development team.",
-            "Helped develop and manage the knowledge base as new issues became apparent and new features were released.",
-            "Deployed, integrated, and troubleshooted the new micro-services based Redbox platform on customer environments.",
-            "Created Kibana dashboards to report on key information that was required by customers.",
-            "Rolled out new containers within Kubernetes as patches became available.",
-            "Developed a Python script that replaced a comprehensive manual health check of the system that support engineers would do. This included checks within Linux, Kubernetes, Eventstore, and Nats, which then reported into a Slack channel via Webhooks. This saved around 20 hours of support time per week at the time of implementation."
+            "Provided end-to-end technical support and issue resolution for Redbox voice recording solutions across multiple environments, including active, passive and VOX-based recording setups for platforms such as Cisco, Mitel, Cloud9, and Motorola.",
+            "Diagnosed and resolved issues related to CDR extraction and audio ingestion, collaborating with client IT teams and resellers to ensure accurate and compliant voice data capture.",
+            "Created and maintained detailed documentation and contributed to the internal knowledge base to support efficient troubleshooting and integration of new features.",
+            "Deployed and troubleshot the microservices-based Redbox voice recording platform, ensuring smooth integration into complex enterprise environments.",
+            "Managed the deployment and patching of containerised services via Kubernetes, ensuring system resilience and maintaining high availability for recording workloads.",
+            "Developed a Python-based automation tool to replace manual system health checks, validating components such as Linux services, Kubernetes pods, Eventstore, and NATS streaming. Output was integrated with Slack via webhooks, reducing manual workload by ~20 hours per week.",
+            "Supported compliance-driven clients in regulated industries, ensuring secure handling of voice data and adherence to standards such as GDPR and internal audit requirements."
         ]
     },
     {

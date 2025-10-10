@@ -4,8 +4,10 @@
         "company": "Resonate",
         "dates": "October 2024 - Present",
         "content": [
-            "Delivered consistent, high-quality client support with a focus on issue resolution, customer satisfaction, and continuous improvement of internal knowledge and support processes.",
-            "Acted as a key liaison between Customer Experience and Engineering teams, translating complex technical issues into actionable solutions and maintaining clear communication with clients."
+            "Resolved complex client issues, improving satisfaction and enhancing internal knowledge base.",
+            "Liaised between Customer Experience and Engineering teams, translating complex technical issues into actionable solutions.",
+            "Supported proprietary train software (Luminate on Docker, Train Movement Viewer on AWS), ensuring system reliability and uptime.",
+            "Analysed train data across multiple systems to identify root causes of operational issues, reducing incident resolution time."
         ]
     },
     {
@@ -13,9 +15,9 @@
         "company": "Kerv",
         "dates": "March 2023 – March 2024",
         "content": [
-            "Worked as one of three engineers on a project for a large bank that involved migrating calls from various Nice NIM systems to Verint 15.2 WFO Voice recording systems.",
-            "Created multiple SQL scripts to ‘normalise’ the CDR data from the Nice databases into a format that the Verint import manager could understand. This involved gathering the data from various tables with various relationships and converting it into a single, large, table.",
-            "Created a PowerShell script to automate the retrieval of calls from EMC Centera, needed as part of the project due to a limitation of the import software. The script polled the database at a regular interval and pulled the call audio using an API in batches as needed."
+            "Led migration of call data for a major bank from Nice NIM systems to Verint 15.2 WFO, ensuring data integrity and minimal downtime.",
+            "Designed SQL scripts to consolidate and normalise multi-source CDR data, enabling smooth Verint import.",
+            "Automated retrieval of call recordings from EMC Centera using PowerShell, reducing manual workload and improving efficiency."
         ]
     },
     {
@@ -23,13 +25,10 @@
         "company": "Redbox Recorders",
         "dates": "October 2020 – March 2023",
         "content": [
-            "Provided end-to-end technical support and issue resolution for Redbox voice recording solutions across multiple environments, including active, passive and VOX-based recording setups for platforms such as Cisco, Mitel, Cloud9, and Motorola.",
-            "Diagnosed and resolved issues related to CDR extraction and audio ingestion, collaborating with client IT teams and resellers to ensure accurate and compliant voice data capture.",
-            "Created and maintained detailed documentation and contributed to the internal knowledge base to support efficient troubleshooting and integration of new features.",
-            "Deployed and troubleshot the microservices-based Redbox voice recording platform, ensuring smooth integration into complex enterprise environments.",
-            "Managed the deployment and patching of containerised services via Kubernetes, ensuring system resilience and maintaining high availability for recording workloads.",
-            "Developed a Python-based automation tool to replace manual system health checks, validating components such as Linux services, Kubernetes pods, Eventstore, and NATS streaming. Output was integrated with Slack via webhooks, reducing manual workload by ~20 hours per week.",
-            "Supported compliance-driven clients in regulated industries, ensuring secure handling of voice data and adherence to standards such as GDPR and internal audit requirements."
+            "Provided technical support for voice recording solutions (Cisco, Mitel, Cloud9, Motorola) across active, passive, and VOX-based setups.",
+            "Managed Kubernetes-deployed microservices, optimising system resilience and uptime.",
+            "Built Python automation tools for system health checks and Slack integration, saving ~20 hours/week of manual work.",
+            "Supported compliance-driven clients, ensuring GDPR and internal audit adherence."
         ]
     },
     {
@@ -37,9 +36,8 @@
         "company": "Iomart Hosting",
         "dates": "October 2019 – September 2020",
         "content": [
-            "Provided technical support and advice for the data centre infrastructure of many clients.",
-            "Installed, supported, and troubleshooted the server hardware and VMware hypervisors for both Iomart and customers' private cloud.",
-            "Supported and troubleshooted customer environments, including Windows and Linux servers on both VMware and cloud infrastructure such as AWS and Azure, Cisco ASA and Firepower firewalls, VPNs, MSSQL and MySQL servers, Apache and Nginx web servers, Barracuda and HAProxy load balancers, Postfix mail servers, and VMware Horizon VDI servers."
+            "Supported and troubleshooted server infrastructure, VMware hypervisors, cloud environments (AWS, Azure), firewalls, VPNs, databases, web servers, and load balancers.",
+            "Assisted clients with Windows/Linux server administration and cloud infrastructure management."
         ]
     },
     {
@@ -47,10 +45,8 @@
         "company": "Buzz Bingo",
         "dates": "February 2019 – September 2019",
         "content": [
-            "Provided technical support and assistance to the head office of around 300 users and approximately 50 remote club locations.",
-            "Configured and inventoried laptops and phones for new starters and leavers.",
-            "Prepared technical tools for executive board meetings.",
-            "Led a project to roll out software updates to club servers using Symantec management software."
+            "Provided IT support to ~300 head office staff and 50 remote locations.",
+            "Managed device configuration, software updates, and technical preparations for executive events."
         ]
     },
     {
@@ -58,20 +54,17 @@
         "company": "Applied Tech Systems",
         "dates": "January 2018 – October 2018",
         "content": [
-            "Imaged and installed Windows PCs using SCCM to modernize the manufacturing floor at Rolls-Royce.",
-            "Installed proprietary software and integrated these PCs with existing manufacturing machines.",
-            "Worked with third parties to ensure network ports were installed and configured correctly.",
-            "Provided additional support to Rolls-Royce for a machine bay that was out of scope for the project. This effort helped bring the machine bay back into production, shielding the company from £1.4 million of potential lost revenue and strengthening the relationship between Applied Tech Systems and Rolls-Royce."
-        ]
+            "Modernised Rolls-Royce manufacturing PCs via SCCM, integrating proprietary software with existing systems.",
+            "Rescued an out-of-scope machine bay, preventing £1.4m in potential lost revenue."
+            ]
     },
     {
         "title": "IT Support Technician",
         "company": "Better-IT",
         "dates": "July 2013 – December 2017",
         "content": [
-            "Provided IT support and advice to small and medium-sized businesses across the East Midlands.",
-            "Assisted with the move of IT equipment between offices.",
-            "Managed Office 365, WordPress websites, NAS devices, network equipment, and phone systems for over 50 companies."
+            "Delivered IT support for 50+ SMB clients across the East Midlands.",
+            "Managed Office 365, WordPress sites, NAS, network equipment, and phone systems."
         ]
     }
 ]
